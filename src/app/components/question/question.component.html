@@ -1,1 +1,26 @@
-<p>question works!</p>
+<div class="card">
+    <div class="card-header card-header-primary">
+        <h4 class="card-title">Question list</h4>
+        <div class="card-category">Please find below the list of questions</div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="text-primary">
+                    <th>ID</th><th>Question</th><th>Answers</th><th>Points</th><th>Active</th><th class="newproduct" [routerLink]="[0]">Add new Question</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let question of questions$ | async">
+                        <td>{{ question.id }}</td>
+                        <td>{{ question.question }}</td>
+                        <td>{{ question.answers }}</td>
+                        <td>{{ question.points }}</td>
+                        <td>{{ question.active }}</td>
+                        <td><div class="btn-group"><button [routerLink]="[question.id]" class="btn btn-success"><i class="fa fa-pencil"></i></button>
+                        <button (click)="deleteQuestion(question)" class="btn btn-danger"><i class="fa fa-trash"></i></button></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

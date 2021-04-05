@@ -4,6 +4,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { QuizEditorComponent } from './components/quiz-editor/quiz-editor.component';
 import { QuestionEditorComponent } from './components/question-editor/question-editor.component';
 import { QuizComponent } from './components/quiz/quiz.component';
+import { QuestionComponent } from './components/question/question.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { StudentEditorComponent } from './components/student-editor/student-editor.component';
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path:"admin/:id", component:StudentEditorComponent},
   {path:"student", component:StudentComponent},
   {path:"student/:id", component:StudentEditorComponent},
-  {path:"question", component:QuestionEditorComponent},
+  {path:"question", component:QuestionComponent},
   {path:"question/:id", component:QuestionEditorComponent},
   {path:"quiz", component:QuizComponent},
   {path:"quiz/:id", component:QuizEditorComponent},
