@@ -1,1 +1,25 @@
-<p>quiz works!</p>
+<div class="card">
+    <div class="card-header card-header-primary">
+        <h4 class="card-title">Quiz list</h4>
+        <div class="card-category">Please find below the list of quizzes</div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="text-primary">
+                    <th>ID</th><th>Title</th><th>Description</th><th>Active</th><th class="newproduct" [routerLink]="[0]">Add new Quiz</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let quiz of quizzes$ | async">
+                        <td>{{ quiz.id }}</td>
+                        <td>{{ quiz.title }}</td>
+                        <td class="w-25">{{ quiz.description }}</td>
+                        <td>{{ quiz.active }}</td>
+                        <td><div class="btn-group"><button [routerLink]="[quiz.id]" class="btn btn-success"><i class="fa fa-pencil"></i></button>
+                        <button (click)="deleteQuiz(quiz)" class="btn btn-danger"><i class="fa fa-trash"></i></button></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

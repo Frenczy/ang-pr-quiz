@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header card-header-primary">
+        <h4 class="card-title">Student list</h4>
+        <div class="card-category">Please find below the list of students</div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="text-primary">
+                    <th>ID</th><th>Name</th><th>Email</th><th>Points</th><th>Active</th><th class="newproduct" [routerLink]="[0]">Add new Student</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of students$ | async">
+                        <td>{{ student.id }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.email }}</td>
+                        <td>{{ student.points }}</td>
+                        <td>{{ student.active }}</td>
+                        <td><div class="btn-group"><button [routerLink]="[student.id]" class="btn btn-success"><i class="fa fa-pencil"></i></button>
+                            <!-- <button (click)="routeStudent(student)" class="btn btn-success"><i class="fa fa-star"></i></button>
+                            <button (click)="routeStudentURL(student)" class="btn btn-success"><i class="fa fa-circle"></i></button> -->
+                            <button (click)="deleteStudent(student)" class="btn btn-danger"><i class="fa fa-trash"></i></button></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

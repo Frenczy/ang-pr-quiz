@@ -1,1 +1,62 @@
-<p>admin works!</p>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- <app-student></app-student> -->
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Student list</h4>
+                        <div class="card-category newproduct" routerLink="/student">Please click here to edit Students</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="text-primary">
+                                    <th>ID</th><th>Name</th><th>Email</th><th>Points</th><th>Active</th><!-- <th class="newproduct" routerLink="/student">Edit Students</th> -->
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let student of students$ | async">
+                                        <td>{{ student.id }}</td>
+                                        <td>{{ student.name }}</td>
+                                        <td>{{ student.email }}</td>
+                                        <td>{{ student.points }}</td>
+                                        <td>{{ student.active }}</td>
+                                        <!-- <td><div class="btn-group"><button [routerLink]="[student.id]" class="btn btn-success"><i class="fa fa-pencil"></i></button>
+                                        <button (click)="deleteStudent(student)" class="btn btn-danger"><i class="fa fa-trash"></i></button></div></td> -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- <app-quiz></app-quiz> -->
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h4 class="card-title">Quiz list</h4>
+                        <div class="card-category newproduct" routerLink="/quiz">Please click here to edit Quizzes</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class="text-primary">
+                                    <th>ID</th><th>Title</th><th>Description</th><th>Active</th><!-- <th class="newproduct" routerLink="/quizzes">Add new Quiz</th> -->
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let quiz of quizzes$ | async">
+                                        <td>{{ quiz.id }}</td>
+                                        <td>{{ quiz.title }}</td>
+                                        <td class="w-50">{{ quiz.description }}</td>
+                                        <td>{{ quiz.active }}</td>
+                                        <!-- <td><div class="btn-group"><button [routerLink]="[quizzes/quiz.id]" class="btn btn-success"><i class="fa fa-pencil"></i></button>
+                                        <button (click)="deleteQuiz(quiz)" class="btn btn-danger"><i class="fa fa-trash"></i></button></div></td> -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

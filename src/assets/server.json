@@ -1,0 +1,136 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "David Coulthard",
+      "email": "david@gmail.com",
+      "points": 2,
+      "active": "true"
+    },
+    {
+      "id": 2,
+      "name": "Damon Hill",
+      "email": "damon@gmail.com",
+      "points": 0,
+      "active": "true"
+    },
+    {
+      "name": "Mika Hakkinen",
+      "email": "Mika@gmail.com",
+      "points": 1,
+      "active": "true",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Lewis Hamilton",
+      "email": "lewis@gmail.com",
+      "points": 0,
+      "active": "true"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": 1,
+      "title": "Advanced Quiz",
+      "description": "A more difficult quiz for those who do not afraid",
+      "active": "true",
+      "questions": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Beginner Quiz",
+      "description": "A less difficult quiz for those who do not dare",
+      "active": "true",
+      "questions": [
+        {
+          "id": 3
+        },
+        {
+          "id": 4
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "Who was Damon Hill?",
+      "points": 2,
+      "active": "true",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Rocket-scientist",
+          "correct": "false"
+        },
+        {
+          "id": 2,
+          "content": "Formula-1 driver",
+          "correct": "true"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Who was David Coulthard?",
+      "points": 2,
+      "active": "true",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Chef",
+          "correct": "false"
+        },
+        {
+          "id": 2,
+          "content": "Formula-1 driver",
+          "correct": "true"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "2+2=?",
+      "points": 1,
+      "active": "true",
+      "answers": [
+        {
+          "id": 1,
+          "content": "4",
+          "correct": "true"
+        },
+        {
+          "id": 2,
+          "content": "3",
+          "correct": "false"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "1+1=?",
+      "points": 1,
+      "active": "true",
+      "answers": [
+        {
+          "id": 1,
+          "content": "2",
+          "correct": "true"
+        },
+        {
+          "id": 2,
+          "content": "1",
+          "correct": "false"
+        }
+      ]
+    }
+  ]
+}
